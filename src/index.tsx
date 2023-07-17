@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import {BrowserRouter} from "react-router-dom";
-import ThemeProvider from "./theme/ThemeProvider";
+
+import {BrowserRouter} from "react-router-dom"
+import {ThemeProvider} from "./app/providers/ThemeProvider";
+import App from "./app/App";
+
+import '../src/shared/config/i18n/i18n'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,8 +17,6 @@ root.render(
             <App/>
         </ThemeProvider>
     </BrowserRouter>
-
-
 );
 
 // If you want to start measuring performance in your app, pass a function
