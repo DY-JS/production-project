@@ -1,23 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
-import {BrowserRouter} from "react-router-dom"
-import {ThemeProvider} from "./app/providers/ThemeProvider";
-import App from "./app/App";
+import { BrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from './app/providers/ThemeProvider'
+import App from './app/App'
 
 import '../src/shared/config/i18n/i18n'
+import { ErrorBoundary } from './app/providers/ErrorBoundary'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
-);
+)
 root.render(
 
     <BrowserRouter>
-        <ThemeProvider>
-            <App/>
-        </ThemeProvider>
+        <ErrorBoundary>
+            <ThemeProvider>
+                <App />
+            </ThemeProvider>
+        </ErrorBoundary>
     </BrowserRouter>
-);
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

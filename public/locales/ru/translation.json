@@ -2,5 +2,7 @@
   "Кey for translation": "Ключ для перевода",
   "Translate": "Перевести",
   "Language": "Русский",
-  "Page not Found":"Cтраница не найдена"
+  "Page not Found":"Cтраница не найдена",
+  "Unpredictable error occurs": "Непредвиденная ошибка",
+  "Reload Page": "Перезагрузить страницу"
 }
