@@ -2,7 +2,11 @@
   "Кey for translation": "Ключ для перевода",
   "Translate": "Перевести",
   "Language": "Русский",
+  "Short Language": "Ru",
   "Page not Found":"Cтраница не найдена",
   "Unpredictable error occurs": "Непредвиденная ошибка",
-  "Reload Page": "Перезагрузить страницу"
+  "Reload Page": "Перезагрузить страницу",
+  "Main": "Главная",
+  "About": "О сайте",
+  "Sign In": "Войти"
 }

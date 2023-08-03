@@ -1,4 +1,4 @@
-type Mods = Record<string, boolean | string> // кортеж (строка: true)
+type Mods = Record<string, boolean | string | undefined> // кортеж (строка: true)
 
 // ф-ция для склеивания классов по условию - возвр. строку
 // принимает: осн. класс, обьект с названием-true/false, массив классов

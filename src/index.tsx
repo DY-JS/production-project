@@ -7,12 +7,13 @@ import App from './app/App'
 
 import '../src/shared/config/i18n/i18n'
 import { ErrorBoundary } from './app/providers/ErrorBoundary'
-
+import './app/styles/index.scss'
+import {StoreProvider} from "./app/providers/StoreProvider";
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 )
 root.render(
-
+<StoreProvider>
     <BrowserRouter>
         <ErrorBoundary>
             <ThemeProvider>
@@ -20,6 +21,7 @@ root.render(
             </ThemeProvider>
         </ErrorBoundary>
     </BrowserRouter>
+</StoreProvider>
 )
 
 // If you want to start measuring performance in your app, pass a function

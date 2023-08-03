@@ -8,9 +8,22 @@
   --font-line-l: 32px;
   --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
 
+  --font-size-xl: 32px;
+  --font-line-xl: 40px;
+  --font-xl: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+
   //Sizes
   --navbar-height: 50px;
 
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 110px;
+
+  //z-indexes
+  --modal-z-ndex: 10;
+
+  //colors
+  --overlay-color: rgba(0 0 0/60%)
+
+
 }

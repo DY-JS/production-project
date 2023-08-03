@@ -47,7 +47,8 @@ const config: Config = {
   ],
 
   // The root directory that Jest should scan for tests and modules within
-  rootDir: '../../'
+  rootDir: '../../',
+  setupFilesAfterEnv: ['<rootDir>/config/jest/setupTest.ts']
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,

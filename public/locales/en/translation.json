@@ -2,7 +2,11 @@
 "Кey for translation": "Кey for translation",
   "Translate": "Translate",
   "Language": "English",
+  "Short Language": "En",
   "Page not Found":"Page not Found",
   "Unpredictable error occurs": "Unpredictable error occurs",
-  "Reload Page": "Reload Page"
+  "Reload Page": "Reload Page",
+  "Main": "Main",
+  "About": "About",
+  "Sign In":  "Sign In"
 }

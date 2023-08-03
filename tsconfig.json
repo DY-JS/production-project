@@ -32,5 +32,6 @@
 //      "*": ["./src/*"] //для настройки абсолютных путей от src
 //    }
   },
-  "include": ["src", "declaration.d.ts"]
+  "include": ["src", "./src/**/*.ts", "./src/**/*.tsx", "declaration.d.ts", "./config/jest/setupTest.ts"],
+
 }

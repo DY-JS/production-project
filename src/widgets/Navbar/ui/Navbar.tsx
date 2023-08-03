@@ -1,21 +1,34 @@
-import React from 'react';
+import React, {useCallback, useState} from 'react';
 import {classNames} from "../../../shared/lib/classNames";
 import cls from "./Navbar.module.scss"
-import AppLink, {AppLinkTheme} from "../../../shared/ui/AppLink/AppLink";
-import {ThemeSwitcher} from "../../ThemeSwitcher";
+import Modal from "../../../shared/ui/Modal/Modal";
+import {Button} from "../../../shared/ui/Button";
+import {ThemeButton} from "../../../shared/ui/Button/ui/Button";
+import {useTranslation} from "react-i18next";
 
 interface NavBarProps {
     className?: string;
 }
 
 export const Navbar = ({className}: NavBarProps) => {
+    const { t } = useTranslation()
+    const [isAuthModal, setIsAuthModal] = useState(false)
+    const toggleModal =  useCallback(() => {
+        setIsAuthModal(prev => !prev)
+    }, [])
+
     return (
         <div className={classNames(cls.navbar, {}, [className || ''])}>
             {/*<ThemeSwitcher/>*/}
-            <div className={cls.links}>
-            <AppLink theme={AppLinkTheme.SECONDARY} to="/" className={cls.mainLink}>Main</AppLink>
-            <AppLink theme={AppLinkTheme.SECONDARY} to="/about">About</AppLink>
-            </div>
+            <Button
+                className={cls.links}
+                theme={ThemeButton.CLEAR_INVERTED}
+                onClick={toggleModal}>
+                {t("Sign In")}
+            </Button>
+            <Modal isOpen={isAuthModal} onClose={toggleModal}>
+                Front-end developers are one of the top 10 In-Demand IT Jobs in 2022 but identifying the best candidates can be a challenge when it comes to finding the right mix of hard and soft skills, not to mention individuals that will fit into your company’s culture.
+            </Modal>
         </div>
     );
 };
